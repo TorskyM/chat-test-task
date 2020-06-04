@@ -2,10 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ChatDashboardComponent } from '../components/chat-dashboard/chat-dashboard.component';
+import { ChatSidebarComponent } from '../components/chat-sidebar/chat-sidebar.component';
+import { ChatListComponent } from '../components/chat-list/chat-list.component';
+import { UserStatusComponent } from '../components/user-status/user-status.component';
+import { ChatItemComponent } from '../components/chat-item/chat-item.component';
+import { ChatMessagesComponent } from '../components/chat-messages/chat-messages.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChatDashboardComponent,
+    ChatSidebarComponent,
+    ChatListComponent,
+    UserStatusComponent,
+    ChatItemComponent,
+    ChatMessagesComponent
   ],
   imports: [
     BrowserModule
