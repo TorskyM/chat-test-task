@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-status',
@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-status.scss']
 })
 export class UserStatusComponent implements OnInit {
+  @Input() public userAvatarUrl: string = '../../assets/images/default_profile.png';
 
-  constructor() { }
+  public isOnline: boolean = false;
 
   ngOnInit(): void {
   }

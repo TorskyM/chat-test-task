@@ -1,1 +1,11 @@
-<p>user-status works!</p>
+<div class="user">
+  <img
+    class="user__picture"
+    [src]="userAvatarUrl"
+    alt="User avatar"
+  />
+  <span
+    class="user__status"
+    [ngClass]="isOnline ? 'online' : 'offline'"
+  ></span>
+</div>
