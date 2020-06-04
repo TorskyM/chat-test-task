@@ -1,5 +1,11 @@
-  <div class="chat-info">Chat info</div>
+<div class="chat-info">
+  <app-user-status
+    [userAvatarUrl]="userChat.avatarUrl"
+    [isOnline]="userChat.isOnline"
+  ></app-user-status>
+  <h3 class="chat-info__user-name">{{ userChat.userName }}</h3>
+</div>
   <div class="messages">
-    <app-message-item></app-message-item>
+    <app-message-item [message]="message"></app-message-item>
   </div>
   <app-new-message></app-new-message>

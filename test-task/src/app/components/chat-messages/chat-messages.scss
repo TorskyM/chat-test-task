@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 :host {
   position: relative;
   display: flex;
@@ -10,9 +12,17 @@
 .messages {
   overflow-y: scroll;
   border-bottom: 1px solid rgb(240, 240, 240);
-  max-height: 200px;
+  max-height: 400px;
+  height: 333px;
 }
 
 .chat-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background-color: rgb(245, 245, 245);
+
+  &__user-name {
+    font-family: $mainFontThin;
+  }
 }

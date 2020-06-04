@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserStatusComponent implements OnInit {
   @Input() public userAvatarUrl: string = '../../../assets/images/default-profile.png';
-
-  public isOnline: boolean = false;
+  @Input() public isOnline: boolean = false;
 
   ngOnInit(): void {
   }
