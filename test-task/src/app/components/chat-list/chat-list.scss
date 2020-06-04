@@ -1,5 +1,7 @@
 .chat-list {
   overflow-y: scroll;
+  max-height: 400px;
+  height: 333px;
 
   &__title {
     color: rgb(116, 177, 212);

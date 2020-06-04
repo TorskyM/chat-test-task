@@ -1,0 +1,16 @@
+<div class="message__container" [class.mine]="message.isOwnMessage">
+  <div class="message__block"
+    [ngClass]="message.isOwnMessage ? 'mine' : 'yours'">
+    <div *ngIf="!message.isOwnMessage" class="message__owner">
+    </div>
+    <div class="message">
+      {{ message.content }}
+      <div class="message-status">
+        <div class="message-status__post-time">{{ messagePostTime | date:'shortTime' }}</div>
+      </div>
+    </div>
+  </div>
+<span class="message__incoming-time">
+  {{ currentTime | date:'short' }}
+</span>
+</div>
