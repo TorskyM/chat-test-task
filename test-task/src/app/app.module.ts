@@ -10,6 +10,8 @@ import { ChatItemComponent } from './components/chat-item/chat-item.component';
 import { ChatMessagesComponent } from './components/chat-messages/chat-messages.component';
 import { UserComponent } from './components/user/user.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { MessageItemComponent } from './components/message-item/message-item.component';
+import { NewMessageComponent } from './components/new-message/new-message.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     ChatItemComponent,
     ChatMessagesComponent,
     UserComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    MessageItemComponent,
+    NewMessageComponent
   ],
   imports: [
     BrowserModule

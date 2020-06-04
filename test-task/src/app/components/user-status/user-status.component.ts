@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user-status.scss']
 })
 export class UserStatusComponent implements OnInit {
-  @Input() public userAvatarUrl: string = '../../../assets/images/default_profile.png';
+  @Input() public userAvatarUrl: string = '../../../assets/images/default-profile.png';
 
   public isOnline: boolean = false;
 
