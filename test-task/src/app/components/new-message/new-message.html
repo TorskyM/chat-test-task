@@ -1,4 +1,10 @@
 <div class="new-message">
-  <input class="new-message__input-area" type="text" placeholder="Type your message">
-  <img class="new-message__send-icon" [src]="sendImageUrl"/>
+  <input
+    class="new-message__input-area"
+    type="text"
+    placeholder="Type your message"
+    [(ngModel)]="newMessageText"
+    (keydown)="onKeyDown($event)"
+  >
+  <img class="new-message__send-icon" [src]="sendImageUrl" (click)="sendMessage()"/>
 </div>
