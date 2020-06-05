@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, QueryList, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, ElementRef, OnDestroy } from '@angular/core';
 
 import { Subscription, Observable } from 'rxjs';
 
@@ -13,7 +13,7 @@ import { ChatService } from '../../services/chat.service';
   templateUrl: './chat-messages.html',
   styleUrls: ['./chat-messages.scss']
 })
-export class ChatMessagesComponent implements OnInit {
+export class ChatMessagesComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly httpService: HttpService,
@@ -30,9 +30,6 @@ export class ChatMessagesComponent implements OnInit {
   public messagesSub: Subscription;
 
   public ngOnInit(): void {
-    console.log(this.chatService.chatData);
-
-    console.log(this.currentChat);
   }
 
   public onKeyDown(event): void {
@@ -71,4 +68,6 @@ export class ChatMessagesComponent implements OnInit {
         }
       });
   }
+
+  public ngOnDestroy(): void { }
 }

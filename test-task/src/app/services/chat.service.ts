@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { IChat } from '../interfaces/chat.interface';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,13 @@ export class ChatService {
 
   public shareChatData(chatData: IChat): void {
     this.chatData = chatData;
-    console.log(this.chatData);
   }
+
+  public chatObservable = Observable.create((observer: any) => {
+    try {
+      observer.next(this.chatData)
+    } catch (err) {
+      observer.error(err)
+    }
+  })
 }

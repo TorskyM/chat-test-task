@@ -15,7 +15,6 @@ export class ChatItemComponent implements OnInit {
   @Input() chat: IChat;
 
   public ngOnInit(): void {
-    console.log(this.chat);
   }
 
   public chatClickHandler(): void {
