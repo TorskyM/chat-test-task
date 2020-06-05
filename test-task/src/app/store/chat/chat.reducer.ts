@@ -9,7 +9,7 @@ export interface IState {
 export const initialState: IState = {
   chat: {
     userName: 'Someone',
-    avatarUrl: '../../assets/images/default-profile.png',
+    avatarUrl: '../../../assets/images/default-profile.png',
     isOnline: false,
     history: []
   },

@@ -70,8 +70,6 @@ export class ChatMessagesComponent implements OnInit, OnDestroy {
     this.messagesSub = this.messageRefsList.changes
       .subscribe(messagesList => {
         if (messagesList.length) {
-          console.log('asdasdasdasdadsdasdasddsdas');
-          
           messagesList.last.nativeElement.scrollIntoView();
         }
       });

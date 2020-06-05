@@ -1,4 +1,6 @@
+@import '../../styles/variables';
+
 :host {
-  border-bottom: 1px solid rgb(225, 225, 225);
-  background-color: rgb(245, 245, 245);
+  border-bottom: 1px solid $fontColorLight;
+  background-color: $bgColorMediumLight;
 }
