@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+
+import { IChat } from 'src/app/interfaces/chat.interface';
+import { HttpService } from 'src/app/services/http.service';
+
 @Component({
   selector: 'app-chat-list',
   templateUrl: './chat-list.html',
@@ -7,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly httpService: HttpService) { }
+
+  public chats$: Observable<IChat>;
 
   ngOnInit(): void {
+    this.chats$ = this.httpService.getChats();
   }
 
 }

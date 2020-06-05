@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { IChat } from 'src/app/interfaces/chat.interface';
+import { ChatService } from '../../services/chat.service';
 
 @Component({
   selector: 'app-chat-item',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly chatService: ChatService) { }
 
-  ngOnInit(): void {
+  @Input() chat: IChat;
+
+  public ngOnInit(): void {
   }
 
+  public chatClickHandler(): void {
+    this.chatService.shareChatData(this.chat);
+  }
 }
