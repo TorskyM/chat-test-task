@@ -1,0 +1,146 @@
+[
+  {
+    "userName": "Josefina",
+    "avatarUrl": "src/assets/images/default-profile.png",
+    "isOnline": true,
+    "history": [{
+      "content": "Hello",
+      "createdAt": "1.01.2011, 02:03:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "World",
+      "createdAt": "1.01.2011, 02:04:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Alice Test 1",
+      "createdAt": "1.01.2011, 02:04:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Alice Test 2",
+      "createdAt": "1.01.2011, 02:05:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Alice Test 3",
+      "createdAt": "1.01.2011, 02:06:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Lorem ipsum",
+      "createdAt": "1.01.2011, 02:09:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Lorem",
+      "createdAt": "1.01.2011, 02:10:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    }
+    ]
+  },
+  {
+    "userName": "Alice Freeman",
+    "avatarUrl": "src/assets/images/default-profile.png",
+    "isOnline": true,
+    "history": [{
+      "content": "Hello",
+      "createdAt": "1.01.2011, 02:03:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Alice World",
+      "createdAt": "1.01.2011, 02:04:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Alice Test 1",
+      "createdAt": "1.01.2011, 02:04:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Alice Test 2",
+      "createdAt": "1.01.2011, 02:05:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Alice Test 3",
+      "createdAt": "1.01.2011, 02:06:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Lorem ipsum",
+      "createdAt": "1.01.2011, 02:09:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Lorem",
+      "createdAt": "1.01.2011, 02:10:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    }
+    ]
+  },
+  {
+    "userName": "Velazquez",
+    "avatarUrl": "src/assets/images/default-profile.png",
+    "isOnline": true,
+    "history": [{
+      "content": "Hello",
+      "createdAt": "1.01.2011, 02:03:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Velazquez World",
+      "createdAt": "1.01.2011, 02:04:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Velazquez Test 1",
+      "createdAt": "1.01.2011, 02:04:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Velazquez Test 2",
+      "createdAt": "1.01.2011, 02:05:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Velazquez Test 3",
+      "createdAt": "1.01.2011, 02:06:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Lorem ipsum",
+      "createdAt": "1.01.2011, 02:09:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    },
+    {
+      "content": "Lorem",
+      "createdAt": "1.01.2011, 02:10:04.567",
+      "isOwnMessage": false,
+      "isTimeStamped": true
+    }
+    ]
+  }
+]

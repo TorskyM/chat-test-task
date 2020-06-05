@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { IChat } from 'src/app/interfaces/chat.interface';
+import { HttpService } from '../../services/http.service';
 
 @Component({
   selector: 'app-chat-item',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly httpService: HttpService) { }
+
+  @Input() chat: IChat;
 
   ngOnInit(): void {
+    console.log(this.chat);
+    
   }
 
 }

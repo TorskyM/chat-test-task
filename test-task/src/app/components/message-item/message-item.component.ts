@@ -17,6 +17,7 @@ export class MessageItemComponent implements OnInit {
   ngOnInit(): void {
     this.messagePostTime = this.message.createdAt ||
     this.currentTime.toString();
+    console.log(this.message);
+    
   }
-
 }

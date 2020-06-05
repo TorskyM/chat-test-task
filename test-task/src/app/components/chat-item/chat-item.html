@@ -1,8 +1,8 @@
 <div class="chat-item">
   <app-user-status></app-user-status>
   <div class="chat-item__info">
-    <h5>Name</h5>
-    <p>Last message</p>
+    <h5>{{ chat.userName }}</h5>
+    <p>{{ chat.history[chat.history.length - 1] }}</p>
   </div>
-  <span class="chat-item__date">date</span>
+  <span class="chat-item__date">{{ chat.chat.history[chat.history.length - 1].createdAt }}</span>
 </div>
