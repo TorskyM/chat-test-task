@@ -5,12 +5,9 @@
     </div>
     <div class="message">
       {{ message.content }}
-      <div class="message-status">
-        <div class="message-status__post-time">{{ messagePostTime | date:'shortTime' }}</div>
-      </div>
     </div>
   </div>
 <span class="message__incoming-time">
-  {{ currentTime | date:'short' }}
+  {{ messagePostTime | date:'short' }}
 </span>
 </div>

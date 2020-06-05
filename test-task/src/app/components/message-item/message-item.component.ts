@@ -18,6 +18,5 @@ export class MessageItemComponent implements OnInit {
     this.messagePostTime = this.message.createdAt ||
     this.currentTime.toString();
     console.log(this.message);
-    
   }
 }
