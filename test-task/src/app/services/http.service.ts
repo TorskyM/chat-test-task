@@ -18,7 +18,7 @@ export class HttpService {
     return this.http.get<IJoke>(URLs.JOKE);
   }
 
-  public getChats(): Observable<IChat> {
-    return this.http.get<IChat>(URLs.DATA);
+  public getChats(): Observable<IChat[]> {
+    return this.http.get<IChat[]>(URLs.DATA);
   }
 }
