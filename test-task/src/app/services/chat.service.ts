@@ -1,28 +1,27 @@
 import { Injectable } from '@angular/core';
 
 import { IChat } from '../interfaces/chat.interface';
-import { Observable } from 'rxjs';
+import { ChatFacade } from '../store/chat/chat.facade';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatService {
-  public chatData: IChat = {
-    userName: 'Someone',
-    avatarUrl: '../../assets/images/default-profile.png',
-    isOnline: false,
-    history: []
-  };
 
-  public shareChatData(chatData: IChat): void {
-    this.chatData = chatData;
+  constructor( public chatFacade: ChatFacade) { }
+
+  public currentChat: IChat;
+
+  public shareChatData(chat: IChat): void {
+    this.chatFacade.setCurrentChat(chat);
   }
 
-  public chatObservable = Observable.create((observer: any) => {
-    try {
-      observer.next(this.chatData)
-    } catch (err) {
-      observer.error(err)
-    }
-  })
+  public getChatData(): IChat {
+    this.chatFacade.getChat();
+
+    this.chatFacade.currentChat$
+      .subscribe(data => this.currentChat = data.chat);
+
+    return this.currentChat;
+  }
 }
