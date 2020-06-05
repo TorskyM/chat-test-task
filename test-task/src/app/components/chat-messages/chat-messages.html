@@ -1,6 +1,5 @@
 <div class="chat-info">
   <app-user-status
-    [userAvatarUrl]="currentChat.avatarUrl"
     [isOnline]="currentChat.isOnline"
   ></app-user-status>
   <h3 class="chat-info__user-name">{{ currentChat.userName }}</h3>
@@ -8,6 +7,7 @@
   <div class="messages" #msgWrapper>
     <app-message-item
       *ngFor="let message of messages"
+      [currentChat]="currentChat"
       [message]="message"
     ></app-message-item>
   </div>

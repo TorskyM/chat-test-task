@@ -1,7 +1,9 @@
+@import '../../styles/variables';
+
 :host {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 40%;
-  background-color: #fff;
+  background-color: $fontColorLight;
 }

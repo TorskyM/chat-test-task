@@ -1,13 +1,26 @@
-<div class="message__container" [class.mine]="message.isOwnMessage">
-  <div class="message__block"
-    [ngClass]="message.isOwnMessage ? 'mine' : 'yours'">
-    <div *ngIf="!message.isOwnMessage" class="message__owner">
+<div
+  class="message__container"
+  [class.mine]="message.isOwnMessage"
+>
+  <app-user-status
+    *ngIf="!message.isOwnMessage"
+    [ngStyle]="{'weight':'20px', 'height':'15px'}"
+    [isOnline]="currentChat.isOnline"
+  ></app-user-status>
+  <div class="message__wrapper">
+    <div
+      class="message__block"
+      [ngClass]="message.isOwnMessage ? 'mine' : 'yours'">
+      <div
+        *ngIf="!message.isOwnMessage"
+        class="message__owner"
+      ></div>
+      <div class="message">
+        {{ message.content }}
+      </div>
     </div>
-    <div class="message">
-      {{ message.content }}
-    </div>
+    <span class="message__incoming-time">
+      {{ messagePostTime | date:'short' }}
+    </span>
   </div>
-<span class="message__incoming-time">
-  {{ messagePostTime | date:'short' }}
-</span>
 </div>
