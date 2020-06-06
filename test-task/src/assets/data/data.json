@@ -18,7 +18,7 @@
     {
       "content": "Alice Test 1",
       "createdAt": "2019-04-23T18:25:43.511Z",
-      "isOwnMessage": false,
+      "isOwnMessage": true,
       "isTimeStamped": true
     },
     {
@@ -30,7 +30,7 @@
     {
       "content": "Alice Test 3",
       "createdAt": "2019-04-23T18:25:43.511Z",
-      "isOwnMessage": false,
+      "isOwnMessage": true,
       "isTimeStamped": true
     },
     {
@@ -72,7 +72,7 @@
     {
       "content": "Alice Test 2",
       "createdAt": "2019-04-23T18:25:43.511Z",
-      "isOwnMessage": false,
+      "isOwnMessage": true,
       "isTimeStamped": true
     },
     {
@@ -132,7 +132,7 @@
     {
       "content": "Lorem ipsum",
       "createdAt": "2019-04-23T18:25:43.511Z",
-      "isOwnMessage": false,
+      "isOwnMessage": true,
       "isTimeStamped": true
     },
     {
