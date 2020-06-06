@@ -12,7 +12,6 @@ import { ChatListComponent } from './components/chat-list/chat-list.component';
 import { UserStatusComponent } from './components/user-status/user-status.component';
 import { ChatItemComponent } from './components/chat-item/chat-item.component';
 import { ChatMessagesComponent } from './components/chat-messages/chat-messages.component';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { MessageItemComponent } from './components/message-item/message-item.component';
 import { appReducer } from './app.store';
 
@@ -25,7 +24,6 @@ import { appReducer } from './app.store';
     UserStatusComponent,
     ChatItemComponent,
     ChatMessagesComponent,
-    SearchBarComponent,
     MessageItemComponent,
   ],
   imports: [
