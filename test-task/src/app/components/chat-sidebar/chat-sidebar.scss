@@ -4,13 +4,22 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 40%;
+  width: 35%;
   background-color: $fontColorLight;
 }
 
 .sidebar {
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $borderColorLight;
+  }
+
   &__user {
-    border-bottom: 1px solid $fontColorLight;
+    border-bottom: 1px solid $borderColorLight;
     background-color: $bgColorMediumLight;
   }
 
@@ -21,9 +30,12 @@
     height: 333px;
 
   }
+
   &__title {
-    margin: 15px;
-    color: rgb(116, 177, 212);
+    margin: 25px 15px 35px 15px;
+    font-family: $mainFontThin;
+    font-size: 1.5rem;
+    color: $fontColorBlue;
   }
 }
 
@@ -33,15 +45,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 40px;
+  height: 50px;
 
   &__input {
     margin: 0 auto;
     outline: none;
     border: 1px solid $borderColorLight;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 90%;
-    height: 25px;
+    height: 35px;
     padding: 2px 20px 2px 25px;
     background-color: $bgColorMaxLight;
     font-size: 0.8rem;

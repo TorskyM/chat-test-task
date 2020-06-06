@@ -4,13 +4,19 @@
   display: flex;
   border-bottom: 1px solid $borderColorLight;
   width: 100%;
+  padding-bottom: 10px;
+
+  &:hover {
+    background-color: $bgColorMediumLight;
+    transition: ease-in-out .15s;
+  }
 
   &__chat-name {
     margin-bottom: 5px;
   }
 
   &__last-message {
-    font-size: .7rem;
+    font-size: .9rem;
     color: $fontColorDark;
   }
 
@@ -22,7 +28,7 @@
   &__date {
     width: 25%;
     padding-top: 15px;
-    font-size: .7rem;
+    font-size: .9rem;
     text-align: center;
     font-family: $mainFontThinItalic;
     color: $fontColorDark;

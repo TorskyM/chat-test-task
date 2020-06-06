@@ -1,6 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {
+  Component, OnInit, OnDestroy,
+  ViewChild, ElementRef, ChangeDetectorRef
+} from '@angular/core';
 
-import { Subscription } from 'rxjs';
+import { Subscription, fromEvent } from 'rxjs';
 
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
@@ -16,22 +19,37 @@ import { IChat } from 'src/app/interfaces/chat.interface';
 })
 export class ChatSidebarComponent implements OnInit, OnDestroy {
 
-  constructor(private readonly httpService: HttpService) { }
+  constructor(
+    private readonly cdr: ChangeDetectorRef,
+    private readonly httpService: HttpService
+    ) { }
+
+  @ViewChild('searchBox', {static: true}) public searchBox: ElementRef;
 
   public chats: IChat[];
   public chatBuffer: IChat[] = [];
   public searchIconUrl: string = '../assets/images/search-icon.png';
   public requestedChat: string = '';
   public chatsSub: Subscription;
+  public onBlurSub: Subscription;
 
   public ngOnInit(): void {
     this.chatsSub = this.httpService.getChats().subscribe(data => {
       this.chats = data;
       this.chatBuffer = this.chats;
     });
+
+    this.onBlurSub = fromEvent(document, 'click')
+    .subscribe(el => {
+      if (!this.searchBox.nativeElement.contains(el.target)) {
+        this.requestedChat = '';
+        this.chats = this.chatBuffer;
+      }
+      this.cdr.detectChanges();
+  });
   }
 
-  public onSearch() {
+  public onSearch(): void {
     this.requestedChat.length
     ? this.chats =  this.chats.filter(el => el.userName.includes(this.requestedChat))
     : this.chats = this.chatBuffer;

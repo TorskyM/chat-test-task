@@ -4,7 +4,7 @@
   ></app-user-status>
   <div class="chat-item__info">
     <h5 class="chat-item__chat-name">{{ chat.userName }}</h5>
-    <p class="chat-item__last-message">{{ chat.history[chat.history.length - 1].content }}</p>
+    <p class="chat-item__last-message" *ngIf="chat.history.length">{{ chat.history[chat.history.length - 1].content || 'send Message' }}</p>
   </div>
-  <span class="chat-item__date">{{ chat.history[chat.history.length - 1].createdAt | date:'mediumDate' }}</span>
+  <span class="chat-item__date" *ngIf="chat.history.length">{{ chat.history[chat.history.length - 1].createdAt | date:'mediumDate' || '' }}</span>
 </div>
