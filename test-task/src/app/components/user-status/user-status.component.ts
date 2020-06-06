@@ -5,11 +5,8 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './user-status.html',
   styleUrls: ['./user-status.scss']
 })
-export class UserStatusComponent implements OnInit {
+export class UserStatusComponent {
   @Input() public userAvatarUrl: string = '../../../assets/images/default-profile.png';
   @Input() public isOnline: boolean = false;
-
-  ngOnInit(): void {
-  }
 
 }
