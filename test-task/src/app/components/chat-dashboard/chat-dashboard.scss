@@ -1,0 +1,20 @@
+@import '../../styles//variables';
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  border: 1px solid $borderColorLight;
+  max-height: 469px;
+
+}
+
+.footer {
+  height: 20px;
+  border-top: 1px solid $borderColorLight;
+  background-color: $bgColorMediumLight;
+}
+
+.footer, .dashboard {
+  margin: 0 auto;
+  width: 90%;
+}

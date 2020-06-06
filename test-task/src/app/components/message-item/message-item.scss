@@ -1,0 +1,106 @@
+@import '../../styles/variables';
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px $bgColorGray;
+  padding: 10px;
+  width: 300px;
+}
+
+.message__block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.message {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  min-width: 70px;
+  max-width: 300px;
+  padding: 15px;
+  font-size: 1.2rem;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-end;
+  }
+
+  &__incoming-time {
+    margin: 5px;
+    font-size: 0.9rem;
+    font-family: $mainFontThin;
+    color: $fontColorDark;
+  }
+
+  &__owner {
+    color: $bgColorGray;
+  }
+}
+
+.yours {
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .message {
+    position: relative;
+    margin-right: 20px;
+    padding: 10px 10px 10px 15px;
+    background-color: $bgColorGray;
+    color: $fontColorLight;
+  }
+}
+
+.mine {
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  .message {
+    position: relative;
+    background-attachment: fixed;
+    padding: 7px 7px 7px 15px;
+    background-color: $bgColorLight;
+    color: $fontColorLight;
+  }
+}
+
+.message-status {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  min-width: 35px;
+  height: 10px;
+
+  &__post-time {
+    position: absolute;
+    vertical-align: top;
+    right: 3px;
+    bottom: -6px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .message {
+    font-size: 1rem;
+
+    &__incoming-time  {
+      font-size: 1rem;
+    }
+  }
+
+  .message-status {
+    &__post-time {
+      font-size: .9rem;
+    }
+  }
+}

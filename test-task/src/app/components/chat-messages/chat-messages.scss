@@ -1,0 +1,75 @@
+@import '../../styles/variables';
+
+:host {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $borderColorLight;
+  width: 65%;
+  background-color: $bgColorMaxLight;
+}
+
+.messages {
+  overflow-y: scroll;
+  border-bottom: 1px solid $borderColorLight;
+  height: 333px;
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $borderColorLight;
+  }
+}
+
+.chat-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid $borderColorLight;
+  background-color: $bgColorMediumLight;
+
+  &__user-name {
+    font-family: $mainFontRegular;
+  }
+}
+
+
+.new-message {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+
+  &__wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: $bgColorMediumLight;
+  }
+
+  &__input-area {
+    width: 100%;
+    outline: none;
+    border: 1px solid $borderColorLight;
+    border-radius: 10px;
+    height: 30px;
+    padding: 2px 10px;
+  }
+
+  &__send-icon {
+    position: absolute;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="chat-info">
+  <app-user-status
+    [isOnline]="currentChat.isOnline"
+  ></app-user-status>
+  <h3 class="chat-info__user-name">{{ currentChat.userName }}</h3>
+</div>
+  <div class="messages" #msgWrapper>
+    <app-message-item
+      *ngFor="let message of messages"
+      [currentChat]="currentChat"
+      [message]="message"
+    ></app-message-item>
+  </div>
+<div class="new-message__wrapper">
+  <div class="new-message">
+    <input
+      class="new-message__input-area"
+      type="text"
+      placeholder="Type your message"
+      [(ngModel)]="newMessageText"
+      (keydown)="onKeyDown($event)"
+    >
+    <img class="new-message__send-icon" [src]="sendImageUrl" (click)="sendMessage()"/>
+  </div>
+</div>
