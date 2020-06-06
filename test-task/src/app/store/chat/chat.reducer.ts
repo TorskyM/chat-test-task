@@ -40,4 +40,3 @@ export function chatReducer(state = initialState, action: ChatActions): IState {
       return state;
   }
 }
-
