@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './search-bar.html',
   styleUrls: ['./search-bar.scss']
 })
-export class SearchBarComponent implements OnInit {
+export class SearchBarComponent {
+  public searchIconUrl: string = '../assets/images/search-icon.png';
+  public requestedChat: string = '';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  public onSearch() {
+    console.log(this.requestedChat);
   }
-
 }

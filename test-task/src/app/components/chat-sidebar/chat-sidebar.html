@@ -1,2 +1,26 @@
-<app-user></app-user>
-<app-chat-list></app-chat-list>
+<div class="sidebar">
+  <div class="sidebar__user">
+    <app-user-status></app-user-status>
+    <div class="search-bar" #searchBox>
+      <img
+        class="search-bar__icon"
+        [src]="searchIconUrl"
+        (click)="onSearch()"
+      />
+      <input
+        class="search-bar__input"
+        type="text"
+        placeholder="Search or start new chat"
+        (input)="onSearch()"
+        [(ngModel)]="requestedChat"
+      >
+    </div>
+  </div>
+  <div class="sidebar__chat-list">
+    <h3 class="sidebar__title">Chats</h3>
+    <app-chat-item
+      *ngFor="let chat of chats"
+      [chat]="chat"
+    ></app-chat-item>
+  </div>
+</div>

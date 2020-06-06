@@ -1,6 +1,16 @@
+@import '../../styles//variables';
+
 .dashboard {
   display: flex;
   justify-content: center;
+}
+
+.footer {
+  height: 20px;
+  border-top: 1px solid $borderColorLight;
+}
+
+.footer, .dashboard {
   margin: 0 auto;
   width: 90%;
 }

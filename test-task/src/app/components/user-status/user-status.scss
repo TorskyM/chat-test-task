@@ -1,11 +1,18 @@
+@import '../../styles/variables';
+
 :host {
   max-height: 70px;
+  margin-bottom: 10px;
 }
 
 .user {
   position: relative;
-  margin: 15px;
+  display: block;
   width: 50px;
+
+  &__wrapper {
+    padding: 15px;
+  }
 
   &__status {
     position: absolute;
@@ -13,20 +20,20 @@
     bottom: 2px;
     padding: 0 3px;
     border-radius: 50%;
-    color: rgb(119, 108, 108);
+    color: $postDateColor;
   }
 
   &__picture {
     border-radius: 50%;
     width: 100%;
-    background-color: rgb(236, 236, 238);
+    background-color: $borderColorLight;
   }
 }
 
 .online {
-  border: 2px solid rgb(4, 187, 4);
+  border: 2px solid $userOnlineColor;
   padding: 1px 3px;
-  color: rgb(4, 187, 4);
+  color: $userOnlineColor;
 
   &:after {
     content: '';
@@ -34,7 +41,7 @@
     transform: rotate(45deg);
     width: 3px;
     height: 6px;
-    border: 1px solid rgb(4, 187, 4);
+    border: 1px solid $userOnlineColor;
     border-width: 0 2px 2px 0;
   }
 }
@@ -43,7 +50,7 @@
   bottom: 2px;
   right: -3px;
   opacity: 0.5;
-  border: 2px solid rgb(102, 107, 102);
+  border: 2px solid $bgColorGray;
   width: 6px;
   height: 6px;
   padding: 6px;
@@ -56,7 +63,7 @@
     right: 5px;
     width: 2px;
     height: 15px;
-    background-color: #333;
+    background-color: $bgColorGray;
   }
 
   &:before {
@@ -67,4 +74,18 @@
     transform: rotate(-45deg);
   }
 
+}
+
+@media screen and (max-width: 320px) {
+  :host {
+    margin-bottom: 0;
+  }
+
+  .user {
+    display: none;
+
+    &__wrapper {
+      display: none;
+    }
+  }
 }

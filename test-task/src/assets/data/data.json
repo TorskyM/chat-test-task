@@ -142,5 +142,11 @@
       "isTimeStamped": true
     }
     ]
+  },
+  {
+    "userName": "Barrera",
+    "avatarUrl": "src/assets/images/default-profile.png",
+    "isOnline": false,
+    "history": []
   }
 ]
