@@ -19,18 +19,23 @@ export class ChatSidebarComponent implements OnInit, OnDestroy {
   constructor(private readonly httpService: HttpService) { }
 
   public chats: IChat[];
+  public chatBuffer: IChat[] = [];
   public searchIconUrl: string = '../assets/images/search-icon.png';
   public requestedChat: string = '';
   public chatsSub: Subscription;
 
   public ngOnInit(): void {
-    this.chatsSub = this.httpService.getChats().subscribe(data => this.chats = data);
+    this.chatsSub = this.httpService.getChats().subscribe(data => {
+      this.chats = data;
+      this.chatBuffer = this.chats;
+    });
   }
 
   public onSearch() {
-    this.chats = this.chats.filter(el => { console.log( [...el.userName].forEach((char, i) => char === this.requestedChat[i]));
-    return [...el.userName].forEach((char, i) => char === this.requestedChat[i] ? el : null)});
+    this.requestedChat.length
+    ? this.chats =  this.chats.filter(el => el.userName.includes(this.requestedChat))
+    : this.chats = this.chatBuffer;
   }
 
-  public ngOnDestroy() : void { }
+  public ngOnDestroy(): void { }
 }
