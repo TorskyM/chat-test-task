@@ -4,12 +4,17 @@
   ></app-user-status>
   <h3 class="chat-info__user-name">{{ currentChat.userName }}</h3>
 </div>
-  <div class="messages" #msgWrapper>
-    <app-message-item
+  <div class="messages">
+    <div
+      #msgWrapper
       *ngFor="let message of messages"
-      [currentChat]="currentChat"
+      class="messages__wrapper"
+    >
+    <app-message-item
       [message]="message"
+      [currentChat]="currentChat"
     ></app-message-item>
+  </div>
   </div>
 <div class="new-message__wrapper">
   <div class="new-message">

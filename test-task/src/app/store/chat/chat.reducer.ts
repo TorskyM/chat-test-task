@@ -21,16 +21,12 @@ export function chatReducer(state = initialState, action: ChatActions): IState {
 
   switch (type) {
     case SetCurrentChat.TYPE:
-      console.log('SetCurrentChat');
-
       return {
         ...state,
         chat: payload
       }
 
     case LoadChatData.TYPE:
-      console.log('LoadChatData');
-
       return {
         ...state,
         loadChat: state.chat

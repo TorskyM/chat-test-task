@@ -16,5 +16,12 @@
 
 .footer, .dashboard {
   margin: 0 auto;
-  width: 90%;
+  width: 70%;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer, .dashboard {
+    margin: 0 auto;
+    width: 90%;
+  }
 }

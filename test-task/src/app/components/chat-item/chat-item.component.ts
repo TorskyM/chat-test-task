@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { IChat } from 'src/app/interfaces/chat.interface';
 import { ChatService } from '../../services/chat.service';
@@ -8,14 +8,11 @@ import { ChatService } from '../../services/chat.service';
   templateUrl: './chat-item.html',
   styleUrls: ['./chat-item.scss']
 })
-export class ChatItemComponent implements OnInit {
+export class ChatItemComponent {
 
   constructor(private readonly chatService: ChatService) { }
 
-  @Input() chat: IChat;
-
-  public ngOnInit(): void {
-  }
+  @Input() public chat: IChat;
 
   public chatClickHandler(): void {
     this.chatService.shareChatData(this.chat);
