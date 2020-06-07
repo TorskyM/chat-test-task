@@ -36,10 +36,10 @@ export class ChatMessagesComponent implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.chatSub = this.chatFacade.currentChat$
-  .subscribe(data => {
-    this.currentChat = data.chat;
-    this.messages = [...data.chat.history];
-  });
+      .subscribe(data => {
+        this.currentChat = data.chat;
+        this.messages = [...data.chat.history];
+      });
   }
 
   public onKeyDown(event: any): void {
@@ -74,7 +74,8 @@ export class ChatMessagesComponent implements OnInit, OnDestroy {
     this.messagesSub = this.messageRefsList.changes
       .subscribe(messagesList => {
         if (messagesList.length) {
-          messagesList.last.nativeElement.scrollIntoView();
+          messagesList.last.nativeElement
+            .scrollIntoView({ behavior: 'smooth', block: 'start' });
         };
       });
   }
