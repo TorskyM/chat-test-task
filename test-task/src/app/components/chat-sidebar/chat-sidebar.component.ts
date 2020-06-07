@@ -24,7 +24,7 @@ export class ChatSidebarComponent implements OnInit, OnDestroy {
     private readonly httpService: HttpService
     ) { }
 
-  @ViewChild('searchBox', {static: true}) public searchBox: ElementRef;
+  @ViewChild('searchBox') public searchBox: ElementRef;
 
   public chats: IChat[];
   public chatBuffer: IChat[] = [];
@@ -44,16 +44,26 @@ export class ChatSidebarComponent implements OnInit, OnDestroy {
       if (!this.searchBox.nativeElement.contains(el.target)) {
         this.requestedChat = '';
         this.chats = this.chatBuffer;
-      }
+      };
+
       this.cdr.detectChanges();
   });
   }
 
-  public onSearch(): void {
+  public onSearch(event: InputEvent): void {
+    if (event.data === null) {
+      this.chats = this.chatBuffer;
+      this.searchChat();
+    };
+
+    this.searchChat();
+  }
+
+  public ngOnDestroy(): void { }
+
+  private searchChat(): void {
     this.requestedChat.length
     ? this.chats =  this.chats.filter(el => el.userName.includes(this.requestedChat))
     : this.chats = this.chatBuffer;
   }
-
-  public ngOnDestroy(): void { }
 }
